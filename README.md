@@ -1,7 +1,9 @@
-# SOEN-341-Group-1-FK-X
+# Electronic Property InterChange
 
-Real Estate CMS
+
 ## Description
+
+The Electronic Property InterChange is a Python-based alternative multiple listing service built on the Django web framework.
 
 ## Getting Started
 
