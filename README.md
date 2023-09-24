@@ -8,6 +8,10 @@ The Electronic Property InterChange is a Python-based alternative multiple listi
 ## Getting Started
 
 ### Installation
+###  Technologies/softwares  used
+Python:  Python  is  chosen  as  a  programming  language  used  for  this project since  everyone  in  this  team  knows  how  to  use  it  or  will  have  to  learn  it  at  some  point during  their  studies.  Also,  it  was  aggreed uponed  that  it  was  porgramming  language  that is  simple  to  use.
+
+MYSQL:
 
 ### Execution
 
@@ -18,7 +22,7 @@ The Electronic Property InterChange is a Python-based alternative multiple listi
 ## Authors
 
 Asim Rahman <br />
-Gianluca Giraldi <br />
+Gianluca Girardi <br />
 Steven Pong <br />
 Ayoud Kchaou <br />
 Dominic Emond <br />
