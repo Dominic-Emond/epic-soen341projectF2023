@@ -1,9 +1,9 @@
-# Electronic Property InterChange
+# Electronic Property InterChange (EPIC)
 
 
 ## Description
 
-The Electronic Property InterChange is a Python-based alternative multiple listing service built on the Django web framework.
+The Electronic Property InterChange (EPIC) is a Python-based alternative multiple listing service built on the Django web framework for alternative brokers.
 
 ## Getting Started
 
