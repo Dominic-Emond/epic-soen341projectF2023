@@ -19,7 +19,7 @@ These three languages were chosen to design the client side because they are kno
 MYSQL:
 
 ## Team Members and Roles
-Asim Rahman: Frontend, implementation of HTML, CSS and JS on the user interface <br />
+Asim Rahman: Frontend, implementation of HTML, CSS and JS on the user interface <br /><br />
 Gianluca Girardi: Second year Sofware Engineering (BEng) at Concordia univeristy. Knowledge in Java, Data Structures, System hardware, Javascript, php, HTML & CSS. Will be responsible for the user interface, implementation of HTML, CSS and JS on the front end. <br /><br />
 Steven Pong: Backend: Database  <br /><br />
 Ayoud Kchaou: Backend <br /><br />
