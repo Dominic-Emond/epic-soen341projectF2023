@@ -3,7 +3,7 @@
 
 ## Description of the Project
 
-The Electronic Property InterChange (EPIC) is a Python-based alternative multiple listing service built on the Django web framework for alternative brokers.
+The Electronic Property InterChange (EPIC) is a Python-based alternative multiple listing service built on the Django web framework for alternative brokers. Overall, EPIC is a digital platform created with the intention of buying, selling and renting of real estate properties. EPIC has one goal: offer large variety of features in the goal of smoothing the entire real estate transaction process. This means combining convenience and efficiency and delivering to all users. This service targets 4 primary users: Homebuyers, Property renters, real-state brokers and system administator(s). Why choose EPIC? Homebuyers & property renters will have the ability to search for properties, save their favorites, serach for brokers and visit properties of interest. Additionally, Homebuyers will have the option of using a Mortgage Calculator serving as a secure tool to confidently adventure the housing market. Next off, real-state brokers will be able to conveiniently submit offers & request visits on behalf of their clients, independently match properties to clients on the EPIC platform and more! Lastly, system adminastrator(s) will have the functionalities necessary to manage brokers on the listing service.
 
 ###  Project Approach and Technology
 #### Back end
