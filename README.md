@@ -1,14 +1,11 @@
 # Electronic Property InterChange (EPIC)
 
 
-## Description
+## Description of the Project
 
 The Electronic Property InterChange (EPIC) is a Python-based alternative multiple listing service built on the Django web framework for alternative brokers.
 
-## Getting Started
-
-### Installation
-###  Technologies/softwares  used
+###  Project Approach and Technology
 #### Back end
 Python:  Python  is  chosen  as  a  programming  language  used  for  this project since  everyone  in  this  team  knows  how  to  use  it  or  will  have  to  learn  it  at  some  point during  their  studies.  Also,  it  was  aggreed upon  that  it  was  porgramming  language  that is  simple  to  use.
 
@@ -21,25 +18,10 @@ These three languages were chosen to design the client side because they are kno
 #### Database
 MYSQL:
 
-### Execution
-
-## Usage
-
-## Roadmap
-
-## Authors
-
-Asim Rahman <br />
-Gianluca Girardi <br />
-Steven Pong <br />
-Ayoud Kchaou <br />
-Dominic Emond <br />
-Seyed Pouya Ghorashi Sarvestani <br />
-
-## Version History
-
-## License
-
-## Contact
-
-## Acknowledgements
+## Team Members and Roles
+Asim Rahman: Frontend, implementation of HTML, CSS and JS on the user interface <br />
+Gianluca Girardi: Second year Sofware Engineering (BEng) at Concordia univeristy. Knowledge in Java, Data Structures, System hardware, Javascript, php, HTML & CSS. Will be responsible for the user interface, implementation of HTML, CSS and JS on the front end. <br />
+Steven Pong: Backend: Database  <br />
+Ayoud Kchaou: Backend <br />
+Dominic Emond: Database <br />
+Seyed Pouya Ghorashi Sarvestani: Backend <br />
