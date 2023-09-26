@@ -12,7 +12,7 @@
   I want to have a list of favorite properties to be able to conveniently go back to properties that were interesting to the user. 
   Finally,  I want to request for visiting properties with a viewing appointment. I want to Look for brokers with a list to choose from.
 
-3.As a broker:
+3. As a broker:
   I want to be able to submit offers to buy properties for my client and see its status (accepted or denied).
   I want to be able to request visits for my client.
   I want CRUD operations (CREATE, READ, UPDATE, DELETE operations).
