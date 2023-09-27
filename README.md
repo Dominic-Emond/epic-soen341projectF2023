@@ -24,6 +24,6 @@ The project approach will follow the agile scrum methodology. Indeed, the projec
 Asim Rahman: Started undergraduate program in Bachelors of Software Engineering in Concorida Univertity on January of 2022. Good Understanding of object Oriented programing from COMP 248 and COMP 249 courses (JAVA language). Some understanding of HTML, CSS and Javascript languages. Also, has knowledge of Assembly language from a System Hardware course (SOEN 228). Will be working on the Frontend implementation of HTML, CSS, JS and the user interface. <br /><br />
 Gianluca Girardi: Second year student in the program of Sofware Engineering (BEng) at Concordia univeristy. Knowledge in Java, Data Structures, System hardware, Javascript, php, HTML & CSS. Will be responsible for the user interface, implementation of HTML, CSS and JS on the front end. <br /><br />
 Steven Pong: Backend: Database  <br /><br />
-Ayoud Kchaou: Backend <br /><br />
+Ayoud Kchaou: Third year computer engineering student . knowledge in python, SQL and Data Structures. Will be working on the backend and Database of the project.  <br /><br />
 Dominic Emond: Database <br /><br />
 Seyed Pouya Ghorashi Sarvestani: Backend <br /><br />
