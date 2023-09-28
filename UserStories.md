@@ -1,4 +1,4 @@
-### User stories
+### User stories for entire project
 
 
 1- As a home buyer, I want to effortlessly search for properties with filters, create a favorites list, schedule viewings, access a list of brokers, and use a Mortgage Calculator for monthly payment estimates.
