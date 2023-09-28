@@ -29,3 +29,12 @@ Steven Pong: Backend: Database  <br /><br />
 Ayoud Kchaou: Third year computer engineering student . knowledge in python, SQL and Data Structures. Will be working on the backend and Database of the project.  <br /><br />
 Dominic Emond: Database <br /><br />
 Seyed Pouya Ghorashi Sarvestani: Backend <br /><br />
+
+|  name |  Knowledge    | Role  |
+|---|---|---|
+| Ayoub Kchaou  | Python,SQL,HTML,CSS  |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
