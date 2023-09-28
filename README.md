@@ -32,7 +32,7 @@ Seyed Pouya Ghorashi Sarvestani: Backend <br /><br />
 
 |   Name |   Knowledge    |  Role  |
 |---|---|---|
-| Ayoub Kchaou  | Python,SQL,HTML,CSS  |   |
+| Ayoub Kchaou  | Python,SQL,HTML,CSS  | Quality Assurance (QA) |
 |   |   |   |
 |   |   |   |
 |   |   |   |
