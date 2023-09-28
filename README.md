@@ -8,7 +8,9 @@ The Electronic Property InterChange (EPIC) is a Python-based alternative multipl
 ###  Project Approach and Technology
 #### Back end languages
 Python:  Python  is  chosen  as  a  programming  language  used  for  this project since  everyone  in  this  team  knows  how  to  use  it  or  will  have  to  learn  it  at  some  point during  their  studies.  Also,  it  was  aggreed upon  that  it  was  programming  language  that is  simple  to  use.<br/><br/>
-MYSQL:
+
+#### Database
+MYSQL: MySQL uses the Structured Query Language (SQL) to interact with the database. SQL is a standard language for querying and manipulating relational databases. Users can use SQL commands to create, retrieve, update, and delete data.
 
 #### Front end languages
 HyperText Markup Language (HTML): HTML is the basic markup language allowing to display content of documents in the in the browser. <br/><br/>
