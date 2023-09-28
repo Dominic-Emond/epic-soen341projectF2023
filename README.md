@@ -7,7 +7,7 @@ The Electronic Property InterChange (EPIC) is a Python-based alternative multipl
 
 ###  Project Approach and Technology
 #### Back end languages
-Python:  Python  is  chosen  as  a  programming  language  used  for  this project since  everyone  in  this  team  knows  how  to  use  it  or  will  have  to  learn  it  at  some  point during  their  studies.  Also,  it  was  aggreed upon  that  it  was  porgramming  language  that is  simple  to  use.<br/><br/>
+Python:  Python  is  chosen  as  a  programming  language  used  for  this project since  everyone  in  this  team  knows  how  to  use  it  or  will  have  to  learn  it  at  some  point during  their  studies.  Also,  it  was  aggreed upon  that  it  was  programming  language  that is  simple  to  use.<br/><br/>
 MYSQL:
 
 #### Front end languages
