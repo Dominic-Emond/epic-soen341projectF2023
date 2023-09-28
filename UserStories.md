@@ -2,15 +2,17 @@
 
 
 1. As a home buyer: 
-  I want to easily look for properties to buy by having criteria’s such as number of bedrooms, types of buildings (duplex, triplex, villa, etc), list of prices and so on.
-  I want to have a list of favorite properties to be able to conveniently go back to properties that were interesting to the user. 
-  I want to request for visiting properties with a viewing appointment. I want to Look for brokers with a list to choose from. 
-  Finally, I want a Mortgage Calculator to be able to estimate monthly payments depending on the interest rate and the loan amount.
+  Effortlessly search for properties with filters like bedrooms, building type, and prices.
+  Create a favorites list for easy access to intriguing properties.
+  Schedule property viewings with appointment requests.
+  Access a list of brokers for assistance in your property hunt.
+  Utilize a Mortgage Calculator to estimate monthly payments based on interest rate and loan amount.
 
 2. As a home renter:
-  I want to easily look for properties to buy by having criteria’s such as number of bedrooms, types of buildings (duplex, triplex, villa, etc), list of prices and so on.
-  I want to have a list of favorite properties to be able to conveniently go back to properties that were interesting to the user. 
-  Finally,  I want to request for visiting properties with a viewing appointment. I want to Look for brokers with a list to choose from.
+  Search for properties to buy based on criteria like bedrooms, building type, and price range.
+  Save favorite properties for easy access.
+  Schedule property viewings by requesting appointments.
+  Choose from a list of available brokers to assist in your property search.
 
 3. As a broker:
   I want to be able to submit offers to buy properties for my client and see its status (accepted or denied).
