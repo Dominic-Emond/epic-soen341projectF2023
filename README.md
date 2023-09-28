@@ -30,7 +30,7 @@ Ayoud Kchaou: Third year computer engineering student . knowledge in python, SQL
 Dominic Emond: Database <br /><br />
 Seyed Pouya Ghorashi Sarvestani: Backend <br /><br />
 
-|  # Name |  # Knowledge    | # Role  |
+|   Name |   Knowledge    |  Role  |
 |---|---|---|
 | Ayoub Kchaou  | Python,SQL,HTML,CSS  |   |
 |   |   |   |
