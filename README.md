@@ -26,10 +26,29 @@ The project approach will follow the agile scrum methodology. Indeed, the projec
 
 |   Name |   Knowledge    |  Role  |
 |---|---|---|
-| Ayoub Kchaou  | Python,SQL,HTML,CSS  | Quality Assurance (QA) |
+| Ayoub Kchaou  | Python,SQL,HTML,CSS  | Quality Assurance (QA) Engineer |
 | Asim Rahman  | HTML,CSS,JAVA,JS  | Product Owner  |
 | Gianluca Girardi  | HTML,CSS,JS,PHP  | Design Master  |
 | Steven Pong  | Python, HTML, CSS, SQL, JS  | Scrum Master  |
 | Dominic Emond  | Python, SQL, HTML, CSS, Javascript  | Project Manager  |
 | Seyed Pouya Ghorashi Sarvestani  |  Python,JAVA,C++ | Database Manager  |
 
+Every member will also act as a software engineer for the project and contribute to the documentation.
+
+### Ayoub Kchaou - Quality Assurance Engineer
+The scope of the project does not allow for continuous integration or delivery. The role of the QA Engineer will therefore be about validating requirements and assigning tests to perform to each member, especially for integration and system testing.
+
+### Asim Rahman - Product Owner
+The main role of the product owner during this project is to make sure that the product backlog and user stories are managed properly and follow the agile methodology.
+
+### Dominic Emond - Project Manager
+The biggest role of a project manager in this project will be to plan the scope and priorities of the project and facilitate communication between members. The project manager also makes sure that every member spends a relatively similar amount of time on the project.
+
+### Gianluca Girardi - Design Master
+The Design Master in this project is the person in charge of designing the user experience on the front end. This should include a simple mockup that front-end software engineers can use.
+
+### Seyed Pouya Ghorashi Sarvestani - Database Manager
+The Database Manager is in charge of the design of the database and will also fill the database with some data to allow testing data for the software engineers.
+
+### Steven Pong - Scrum Master
+The scrum master makes sure that the scrum methodology is followed appropriately and helps lead scrum meetings.
