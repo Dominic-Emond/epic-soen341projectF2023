@@ -1,6 +1,5 @@
 # Electronic Property InterChange (EPIC)
 
-
 ## Description of the Project
 
 The Electronic Property InterChange (EPIC) is a Python-based alternative multiple listing service built on the Django web framework for alternative brokers. Overall, EPIC is a digital platform created with the intention of buying, selling and renting real estate properties. EPIC has one goal: to offer a large variety of features with the goal of smoothing the entire real estate transaction process. This means combining convenience and efficiency and delivering to all users. This service targets 4 primary users: Homebuyers, Property renters, real-state brokers and system administrator(s). Why choose EPIC? Homebuyers & property renters will have the ability to search for properties, save their favourites, search for brokers and visit properties of interest. Additionally, Homebuyers will have the option of using a Mortgage Calculator serving as a secure tool to confidently adventure the housing market. Next off, real-state brokers will be able to conveniently submit offers & request visits on behalf of their clients, independently match properties to clients on the EPIC platform and more! Lastly, system administrators (s) will have the functionalities necessary to manage brokers on the listing service.
@@ -54,3 +53,9 @@ The Database Manager is in charge of the design of the database and will also fi
 
 ### Steven Pong - Scrum Master
 The scrum master makes sure that the scrum methodology is followed appropriately and helps lead scrum meetings.
+
+## Installation Instructions
+There is no code yet and therefore no installation instructions yet.
+
+## Git Rules
+[Wiki Page](../../wiki)
