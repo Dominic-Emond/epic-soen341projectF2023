@@ -39,10 +39,10 @@ The project approach will follow the agile scrum methodology. Indeed, the projec
 
 |   Name |   Knowledge    |  Role  |
 |---|---|---|
-| Ayoub Kchaou  | Python,SQL,HTML,CSS  | Quality Assurance (QA) Engineer |
-| Asim Rahman  | HTML,CSS,JAVA,JS  | Product Owner  |
-| Gianluca Girardi  | HTML,CSS,JS,PHP  | Design Master  |
-| Steven Pong  | Python, HTML, CSS, SQL, JS  | Scrum Master  |
+| Ayoub Kchaou  | Python,SQL,HTML,CSS,Javascript | Quality Assurance (QA) Engineer |
+| Asim Rahman  | HTML,CSS,JAVA,Javascript  | Product Owner  |
+| Gianluca Girardi  | HTML,CSS,Javascript,PHP  | Design Master  |
+| Steven Pong  | Python, HTML, CSS, SQL, Javascript  | Scrum Master  |
 | Dominic Emond  | Python, SQL, HTML, CSS, Javascript  | Project Manager  |
 | Seyed Pouya Ghorashi Sarvestani  |  Python,JAVA,C++ | Database Manager  |
 
