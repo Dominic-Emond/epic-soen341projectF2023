@@ -68,8 +68,5 @@ The Database Manager is in charge of the design of the database and will also fi
 ### Steven Pong - Scrum Master
 The scrum master makes sure that the scrum methodology is followed appropriately and helps lead scrum meetings.
 
-## Installation Instructions
-There is no code yet and therefore no installation instructions yet.
-
 ## Git Rules
 [Wiki Page](../../wiki/Git-Rules)
