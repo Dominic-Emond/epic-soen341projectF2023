@@ -58,4 +58,4 @@ The scrum master makes sure that the scrum methodology is followed appropriately
 There is no code yet and therefore no installation instructions yet.
 
 ## Git Rules
-[Wiki Page](../../wiki)
+[Wiki Page](../../wiki/Git-Rules)
