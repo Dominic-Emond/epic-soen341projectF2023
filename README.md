@@ -43,7 +43,7 @@ The project approach will follow the agile scrum methodology. Indeed, the projec
 | Asim Rahman  | HTML,CSS,JAVA,Javascript  | Product Owner  |
 | Gianluca Girardi  | HTML,CSS,Javascript,PHP  | Design Master  |
 | Steven Pong  | Python, HTML, CSS, SQL, Javascript  | Scrum Master  |
-| Dominic Emond  | Python, SQL, HTML, CSS, Javascript  | Project Manager  |
+| Dominic Emond  | Python, SQL, HTML, CSS, Javascript  | Team Leader  |
 | Seyed Pouya Ghorashi Sarvestani  |  Python,JAVA,C++ | Database Manager  |
 
 Every member will also act as a software engineer for the project and contribute to the documentation. 
@@ -56,8 +56,8 @@ The scope of the project does not allow for continuous integration or delivery. 
 #### Asim Rahman - Product Owner
 The main role of the product owner during this project is to make sure that the product backlog and user stories are managed properly and follow the agile methodology.
 
-#### Dominic Emond - Project Manager
-The biggest role of a project manager in this project will be to plan the scope and priorities of the project and facilitate communication between members. The project manager also makes sure that every member spends a relatively similar amount of time on the project.
+#### Dominic Emond - Team Leader
+The biggest role of the team leader in this project will be to plan the scope and priorities of the project and facilitate communication between members. The team leader also helps other software engineers with technical problems.
 
 #### Gianluca Girardi - Design Master
 The Design Master in this project is the person in charge of designing the user experience on the front end. This should include a simple mockup that front-end software engineers can use.
