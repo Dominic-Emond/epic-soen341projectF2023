@@ -1,6 +1,5 @@
 # Import necessary libraries
 from fastapi import FastAPI, HTTPException
-from mysqlx import XSession
 from sqlalchemy import create_engine, Column, Integer, String, Boolean, ForeignKey, Float
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy.ext.declarative import declarative_base
@@ -71,7 +70,7 @@ Base.metadata.create_all(bind=engine)
 
 def create_user(username, password, email, broker_id, is_broker, is_client, is_sys_admin):
     new_user = User(Username=username, Password=password, Email=email, BrokerID=broker_id, isBroker=is_broker, isClient=is_client, isSysAdmin=is_sys_admin)
-    XSession.add(new_user)
+    SessionLocal.add(new_user)
     SessionLocal.commit()
 
 def read_user(username):
