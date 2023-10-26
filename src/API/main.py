@@ -19,7 +19,7 @@ class Broker(Base):
     phone = Column(String)
 
 # Create the database engine and session
-DATABASE_URL = "sqlite:///./test.db"
+DATABASE_URL = "mysql://username:password@localhost/epic_soen341"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
@@ -43,7 +43,7 @@ def create_broker(broker: BrokerCreate):
     db = SessionLocal()
     db_broker = Broker(**broker.dict())
     db.add(db_broker)
-    db.commit()
+    db.commit() 
     db.refresh(db_broker)
     db.close()
     return JSONResponse(content=db_broker.dict(), status_code=201)
