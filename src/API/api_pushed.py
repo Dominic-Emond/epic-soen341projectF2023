@@ -203,6 +203,92 @@ def delete_user(username: str):
     SessionLocal.commit()
     return {"message": "User deleted"}
 
+# Create a new broker
+@app.post("/brokers/", response_model=Broker)
+def create_broker(broker: BrokerCreate):
+    new_broker = Broker(**broker.dict())
+    SessionLocal.add(new_broker)
+    SessionLocal.commit()
+    SessionLocal.refresh(new_broker)
+    return new_broker
+
+# Read broker by broker_id
+@app.get("/brokers/{broker_id}", response_model=Broker)
+def read_broker(broker_id: int):
+    broker = SessionLocal.query(Broker).filter_by(Id=broker_id).first()
+    if broker is None:
+        raise HTTPException(status_code=404, detail="Broker not found")
+    return broker
+
+# Update broker by broker_id
+@app.put("/brokers/{broker_id}", response_model=Broker)
+def update_broker(broker_id: int, broker: BrokerUpdate):
+    existing_broker = SessionLocal.query(Broker).filter_by(Id=broker_id).first()
+    if existing_broker is None:
+        raise HTTPException(status_code=404, detail="Broker not found")
+
+    for field, value in broker.dict().items():
+        if value is not None:
+            setattr(existing_broker, field, value)
+
+    SessionLocal.commit()
+    return existing_broker
+
+# Delete broker by broker_id
+@app.delete("/brokers/{broker_id}")
+def delete_broker(broker_id: int):
+    existing_broker = SessionLocal.query(Broker).filter_by(Id=broker_id).first()
+    if existing_broker is None:
+        raise HTTPException(status_code=404, detail="Broker not found")
+
+    SessionLocal.delete(existing_broker)
+    SessionLocal.commit()
+    return {"message": "Broker deleted"}
+
+# CRUD operations for Client model
+
+# Create a new client
+@app.post("/clients/", response_model=Client)
+def create_client(client: ClientCreate):
+    new_client = Client(**client.dict())
+    SessionLocal.add(new_client)
+    SessionLocal.commit()
+    SessionLocal.refresh(new_client)
+    return new_client
+
+# Read client by client_id
+@app.get("/clients/{client_id}", response_model=Client)
+def read_client(client_id: int):
+    client = SessionLocal.query(Client).filter_by(Id=client_id).first()
+    if client is None:
+        raise HTTPException(status_code=404, detail="Client not found")
+    return client
+
+# Update client by client_id
+@app.put("/clients/{client_id}", response_model=Client)
+def update_client(client_id: int, client: ClientUpdate):
+    existing_client = SessionLocal.query(Client).filter_by(Id=client_id).first()
+    if existing_client is None:
+        raise HTTPException(status_code=404, detail="Client not found")
+
+    for field, value in client.dict().items():
+        if value is not None:
+            setattr(existing_client, field, value)
+
+    SessionLocal.commit()
+    return existing_client
+
+# Delete client by client_id
+@app.delete("/clients/{client_id}")
+def delete_client(client_id: int):
+    existing_client = SessionLocal.query(Client).filter_by(Id=client_id).first()
+    if existing_client is None:
+        raise HTTPException(status_code=404, detail="Client not found")
+
+    SessionLocal.delete(existing_client)
+    SessionLocal.commit()
+    return {"message": "Client deleted"}
+
 # Create a new property
 @app.post("/properties/", response_model=Property)
 def create_property(property: PropertyCreate):
