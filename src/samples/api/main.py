@@ -72,7 +72,6 @@ async def get_broker(broker_id: int):
         raise HTTPException(status_code=405, detail=f"Invalid Query: {e}")
     
     for row in result:
-        print(row)
         return {
             "Id": row.Id,
             "First_Name": row.First_Name,
@@ -85,8 +84,6 @@ async def get_broker(broker_id: int):
 # Post Broker
 @app.post("/brokers")
 async def post_broker(broker: Broker):
-
-    print("Connected Here!")
 
     query = brokers.insert().values(
         First_Name = broker.First_Name,

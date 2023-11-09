@@ -1,10 +1,18 @@
 from fastapi.testclient import TestClient
+from dotenv import load_dotenv
 from main import app
+import os
 
 client = TestClient(app)
 
 # Testing Broker API Endpoints
 def test_broker():
+
+    # Testing Access to environment variables
+    load_dotenv()
+    test_var = os.getenv("TEST")
+    assert test_var == "123"
+
 
     # Post
     sample_broker = {
