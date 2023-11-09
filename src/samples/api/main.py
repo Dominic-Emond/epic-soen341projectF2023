@@ -3,7 +3,8 @@ from sqlalchemy import create_engine
 from sqlalchemy import Table, Column, Integer, String, MetaData
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from config import db_url
+from dotenv import load_dotenv
+import os
 
 # Creates API
 app = FastAPI()
@@ -20,10 +21,14 @@ app.add_middleware(
 
 # Connect to Database
 try:
+    #Load the URL from the secret variable
+    load_dotenv()
+    db_url = os.getenv("URL")
+    
     engine = create_engine(db_url, echo = True)
     connection = engine.connect()
-except:
-    print("Could not connect to database")
+except Exception as e:
+    print(f"Could not connect to database: {e}")
 
 meta = MetaData()
 
