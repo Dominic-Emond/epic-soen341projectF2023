@@ -7,10 +7,10 @@ async function getPropertyData() {
     const data = await response.json();
     console.log(data);
 
-    addBroker(data);
+    getBroker(data);
 }
 
-function addBroker(data) {
+function getBroker(data) {
     const broker = document.getElementById('broker-name');
     broker.textContent = data.First_Name + " " + data.Last_Name;
 }
