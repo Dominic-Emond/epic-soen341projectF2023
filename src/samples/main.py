@@ -1,13 +1,24 @@
 from fastapi import FastAPI, HTTPException
 from sqlalchemy import create_engine
 from sqlalchemy import Table, Column, Integer, String, MetaData
+from fastapi.middleware.cors import CORSMiddleware
 
 # Creates API
 app = FastAPI()
 
+
+#Add CORS to enable the front end to reach it.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Connect to Database
 try:
-    engine = create_engine('Insert here', echo = True)
+    engine = create_engine('Insert URL Here', echo = True)
     connection = engine.connect()
 except:
     print("Could not connect to database")
