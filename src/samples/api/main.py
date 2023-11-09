@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from sqlalchemy import create_engine
-from sqlalchemy import Table, Column, Integer, String, MetaData
+from sqlalchemy import Table, Column, Integer, String, MetaData, or_
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
@@ -124,3 +124,30 @@ async def update_broker(broker_id: int, broker: Broker):
     return {
         "message": "Broker updated"
     }
+
+
+# Search Broker
+@app.get("/searchbroker/{name}")
+async def get_broker(name: str):
+    try:
+        result = connection.execute(brokers.select().where(
+            or_(
+                brokers.c.First_Name.like(f"%{name}%"),
+                brokers.c.Last_Name.like(f"%{name}%")
+            )))
+    except Exception as e:
+        raise HTTPException(status_code=405, detail=f"Invalid Query: {e}")
+    
+    rows = [
+            {
+                "Id": row.Id,
+                "First_Name": row.First_Name,
+                "Last_Name": row.Last_Name,
+                "Email_Address": row.Email_Address,
+                "Username": row.Username,
+                "Password": row.Pass
+            }
+            for row in result
+    ]
+    
+    return rows
