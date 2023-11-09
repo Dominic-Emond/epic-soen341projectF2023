@@ -27,7 +27,7 @@ jobs:
 
     - name: Run tests
       env:
-        URL: ${{ secrets.DB_URL }}
+        URL: ${{ secrets.URL }}
         TEST: ${{ secrets.TEST }}
       run: |
         pytest -v
