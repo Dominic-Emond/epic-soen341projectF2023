@@ -47,9 +47,7 @@ def delete_broker(broker_id: int, db: Session = Depends(get_db)):
 
 @router.get("/brokers/{broker_id}", response_model=BrokerSchema)
 def read_broker(broker_id: int, db: Session = Depends(get_db)):
-    print("Goes Here!")
     broker = db.query(Broker).filter_by(Id=broker_id).first()
-    print("Goes Here!")
     if broker is None:
         raise HTTPException(status_code=404, detail="Broker not found")
     return broker
