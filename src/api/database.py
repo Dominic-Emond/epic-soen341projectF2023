@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 #  database URL 
-DATABASE_URL = "mysql://soen341"
+DATABASE_URL = "Insert URL"
 
 # Create a SQLAlchemy engine
 engine = create_engine(DATABASE_URL)
