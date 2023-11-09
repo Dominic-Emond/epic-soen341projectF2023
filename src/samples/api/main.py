@@ -49,6 +49,7 @@ class Broker(BaseModel):
 async def delete_broker(broker_id: int):
     try:
         result = connection.execute(brokers.delete().where(brokers.c.Id == broker_id))
+        connection.commit()
     except Exception as e:
         raise HTTPException(status_code=405, detail=f"Invalid Query: {e}")
     
@@ -92,6 +93,7 @@ async def post_broker(broker: Broker):
 
     try:
         result = connection.execute(query)
+        connection.commit()
     except Exception as e:
         raise HTTPException(status_code=405, detail=f"Invalid Query: {e}")
     
@@ -113,6 +115,7 @@ async def update_broker(broker_id: int, broker: Broker):
 
     try:
         result = connection.execute(query)
+        connection.commit()
     except Exception as e:
         raise HTTPException(status_code=405, detail=f"Invalid Query: {e}")
     
