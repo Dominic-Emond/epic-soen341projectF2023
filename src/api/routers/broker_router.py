@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from routers.schemas import BrokerCreate, BrokerUpdate, Broker as BrokerSchema
-from models.broker import Broker
-from database import SessionLocal
+from schemas import BrokerCreate, BrokerUpdate, Broker as BrokerSchema
+from ..models.broker import Broker
+from ..database import SessionLocal
 
 router = APIRouter()
 
@@ -26,7 +26,7 @@ def create_broker(broker: BrokerCreate, db: Session = Depends(get_db)):
 def update_broker(broker_id: int, broker_update: BrokerUpdate, db: Session = Depends(get_db)):
     existing_broker = db.query(Broker).filter_by(Id=broker_id).first()
     if existing_broker is None:
-        raise HTTPException(status_code=404, detail="Broker not found")
+        raise HTTPException(status_code=404, detail="broker.Broker not found")
 
     for field, value in broker_update.dict().items():
         if value is not None:
@@ -39,11 +39,11 @@ def update_broker(broker_id: int, broker_update: BrokerUpdate, db: Session = Dep
 def delete_broker(broker_id: int, db: Session = Depends(get_db)):
     existing_broker = db.query(Broker).filter_by(Id=broker_id).first()
     if existing_broker is None:
-        raise HTTPException(status_code=404, detail="Broker not found")
+        raise HTTPException(status_code=404, detail="broker.Broker not found")
 
     db.delete(existing_broker)
     db.commit()
-    return {"message": "Broker deleted"}
+    return {"message": "broker.Broker deleted"}
 
 @router.get("/brokers/{broker_id}", response_model=BrokerSchema)
 def read_broker(broker_id: int, db: Session = Depends(get_db)):
