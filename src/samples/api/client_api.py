@@ -34,12 +34,12 @@ clients = Table(
     Column('First_Name', String, nullable=False),
     Column('Last_Name', String, nullable=False),
     Column('Username', String, nullable=False),
-    Column('Password', String, nullable=False),
-    Column('Email', String, nullable=False),
-    Column('BrokerID', Integer),
-    Column('isBroker', Boolean, default=False),
-    Column('isClient', Boolean, default=True),  # Set to True for clients
-    Column('isSysAdmin', Boolean, default=False)
+    Column('Pass', String, nullable=False),
+    # Column('Email', String, nullable=False),
+    # Column('BrokerID', Integer),
+    # Column('isBroker', Boolean, default=False),
+    # Column('isClient', Boolean, default=True),  # Set to True for clients
+    # Column('isSysAdmin', Boolean, default=False)
 )
 
 # Client Class (Pydantic model)
@@ -48,11 +48,11 @@ class Client(BaseModel):
     Last_Name: str
     Username: str
     Password: str
-    Email: str
-    BrokerID: int = None
-    isBroker: bool = False
-    isClient: bool = True  # Set to True for clients
-    isSysAdmin: bool = False
+    # Email: str
+    # BrokerID: int = None
+    # isBroker: bool = False
+    # isClient: bool = True  # Set to True for clients
+    # isSysAdmin: bool = False
 
 # CRUD Operations
 
