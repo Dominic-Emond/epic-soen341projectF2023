@@ -31,9 +31,9 @@ try:
     
     engine = create_engine(db_url, echo = True)
     connection = engine.connect()
+
+    # Creating the Routes
+    create_table_routes(brokers_table, BrokerModel, connection, app)
+    create_table_routes(clients, Client, connection, app)
 except Exception as e:
     print(f"Could not connect to database: {e}")
-
-# Creating the Routes
-create_table_routes(brokers_table, BrokerModel, connection, app)
-create_table_routes(clients, Client, connection, app)
