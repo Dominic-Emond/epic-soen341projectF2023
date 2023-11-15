@@ -2,11 +2,21 @@ from fastapi.testclient import TestClient
 from main import app, connectAndRoute
 import os
 
-client = TestClient(app, base_url="http://127.0.0.1:8000")
+client = TestClient(app)
 connectAndRoute()
 
 # Testing Broker API Endpoints
 def test_broker():
+
+    # Checking if the routes has properly there!
+    try: # Github
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+            print(client.base_url, file=fh)
+            print(app.routes, file=fh)
+    except: # Local
+        print(client.base_url)
+        print(app.routes)
+        pass
 
     # Post
     sample_broker = {
