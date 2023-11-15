@@ -46,7 +46,7 @@ def create_table_routes(table, model, connection, app):
     # Create (Post)
     @app.post(f"/{table.name.lower()}")
     async def create_record_route(item: model):
-        id = create_record(table, item.dict(), connection)
+        id = create_record(table, item.model_dump(), connection)
         return {
             "message": f"{table.name} created",
             "Id": id
@@ -61,7 +61,7 @@ def create_table_routes(table, model, connection, app):
     # Update (Put)
     @app.put(f"/{table.name.lower()}/{{id}}")
     async def update_record_route(id: int, item: model):
-        update_record(table, id, item.dict(), connection)
+        update_record(table, id, item.model_dump(), connection)
         return { "message": f"{table.name} updated" }
     
     # Delete

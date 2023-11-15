@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import create_engine
-import os
+# import os
 
 # Internal Imports
 from crud_routing import create_table_routes
@@ -24,9 +24,10 @@ app.add_middleware(
 
 # Connect to Database
 try:
-    #Load the URL from the secret variable
-    load_dotenv()
-    db_url = os.getenv("URL")
+    # Load the URL from the secret variable
+    # load_dotenv()
+    # db_url = os.getenv("URL")
+    db_url = "mysql://concordiadataba:password123@db4free.net:3306/soen341"
     
     engine = create_engine(db_url, echo = True)
     connection = engine.connect()
