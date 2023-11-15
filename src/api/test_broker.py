@@ -11,7 +11,6 @@ def test_broker():
     # Checking if the routes has properly there!
     try: # Github
         with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-            print(str(client.base_url), file=fh)
             print(str(app.routes), file=fh)
     except: # Local
         print(client.base_url)
