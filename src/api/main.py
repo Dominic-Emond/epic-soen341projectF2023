@@ -22,18 +22,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Connect to Database
-try:
-    # Load the URL from the secret variable
-    # load_dotenv()
-    # db_url = os.getenv("URL")
-    db_url = "mysql://concordiadataba:password123@db4free.net:3306/soen341"
-    
-    engine = create_engine(db_url, echo = True)
-    connection = engine.connect()
+def connectAndRoute():
+    # Connect to Database
+    try:
+        # Load the URL from the secret variable
+        # load_dotenv()
+        # db_url = os.getenv("URL")
+        db_url = "mysql://concordiadataba:password123@db4free.net:3306/soen341"
+        
+        engine = create_engine(db_url, echo = True)
+        connection = engine.connect()
 
-    # Creating the Routes
-    create_table_routes(brokers_table, BrokerModel, connection, app)
-    create_table_routes(clients, Client, connection, app)
-except Exception as e:
-    print(f"Could not connect to database: {e}")
+        # Creating the Routes
+        create_table_routes(brokers_table, BrokerModel, connection, app)
+        create_table_routes(clients, Client, connection, app)
+    except Exception as e:
+        print(f"Could not connect to database: {e}")
+
+connectAndRoute()

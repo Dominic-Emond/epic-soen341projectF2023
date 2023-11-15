@@ -1,7 +1,8 @@
 from fastapi.testclient import TestClient
-from main import app
+from main import app, connectAndRoute
 
 client = TestClient(app)
+connectAndRoute()
 
 # Testing Broker API Endpoints
 def test_broker():
