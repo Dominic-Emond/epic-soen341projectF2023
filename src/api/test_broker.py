@@ -21,7 +21,7 @@ def test_broker():
     
     try:
         with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-            print(response, file=fh)
+            print(response.json(), file=fh)
     except:
         pass
 
