@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 from main import app, connectAndRoute
 
-client = TestClient(app)
+client = TestClient(app, base_url="http://127.0.0.1:8000")
 connectAndRoute()
 
 # Testing Broker API Endpoints
@@ -17,6 +17,7 @@ def test_broker():
     }
 
     response = client.post("/broker", json=sample_broker)
+    print(response)
     assert response.status_code == 200
 
     broker_id = response.json().get('Id')
