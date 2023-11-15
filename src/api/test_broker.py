@@ -17,7 +17,7 @@ def test_broker():
     }
 
     response = client.post("/broker", json=sample_broker)
-    print(response)
+    print(f'::set-output name=test_report::{response}')
     assert response.status_code == 200
 
     broker_id = response.json().get('Id')
