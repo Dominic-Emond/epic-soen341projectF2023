@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Verify Code
@@ -26,8 +26,5 @@ jobs:
         pip install pytest
 
     - name: Run tests
-      env:
-        URL: ${{ secrets.URL }}
-        TEST: ${{ secrets.TEST }}
       run: |
         pytest -v

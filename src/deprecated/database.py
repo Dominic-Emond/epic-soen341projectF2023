@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 #  database URL 
-DATABASE_URL = "Insert URL"
+DATABASE_URL = "mysql://concordiadataba:password123@db4free.net:3306/soen341"
 
 # Create a SQLAlchemy engine
 engine = create_engine(DATABASE_URL)
