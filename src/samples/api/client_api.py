@@ -35,11 +35,7 @@ clients = Table(
     Column('Last_Name', String, nullable=False),
     Column('Username', String, nullable=False),
     Column('Pass', String, nullable=False),
-    # Column('Email', String, nullable=False),
-    # Column('BrokerID', Integer),
-    # Column('isBroker', Boolean, default=False),
-    # Column('isClient', Boolean, default=True),  # Set to True for clients
-    # Column('isSysAdmin', Boolean, default=False)
+   
 )
 
 # Client Class (Pydantic model)
@@ -48,11 +44,6 @@ class Client(BaseModel):
     Last_Name: str
     Username: str
     Password: str
-    # Email: str
-    # BrokerID: int = None
-    # isBroker: bool = False
-    # isClient: bool = True  # Set to True for clients
-    # isSysAdmin: bool = False
 
 # CRUD Operations
 
@@ -64,11 +55,6 @@ async def create_client(client: Client):
         Last_Name=client.Last_Name,
         Username=client.Username,
         Password=client.Password,  # Store password as plain text (not recommended in production)
-        Email=client.Email,
-        BrokerID=client.BrokerID,
-        isBroker=client.isBroker,
-        isClient=client.isClient,
-        isSysAdmin=client.isSysAdmin
     )
 
     try:
@@ -100,12 +86,7 @@ async def update_client(client_id: int, client: Client):
         First_Name=client.First_Name,
         Last_Name=client.Last_Name,
         Username=client.Username,
-        Password=client.Password,  # Update password as plain text (not recommended in production)
-        Email=client.Email,
-        BrokerID=client.BrokerID,
-        isBroker=client.isBroker,
-        isClient=client.isClient,
-        isSysAdmin=client.isSysAdmin
+        Password=client.Password  # Update password as plain text (not recommended in production)
     )
 
     try:

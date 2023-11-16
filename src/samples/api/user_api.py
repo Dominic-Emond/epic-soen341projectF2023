@@ -36,7 +36,6 @@ users = Table(
     Column('Username', String, nullable=False),
     Column('Password', String, nullable=False),
     Column('Email', String, nullable=False),
-    Column('BrokerID', Integer),
     Column('isBroker', Boolean, default=False),
     Column('isClient', Boolean, default=False),
     Column('isSysAdmin', Boolean, default=False)
@@ -49,7 +48,7 @@ class User(BaseModel):
     Username: str
     Password: str
     Email: str
-    BrokerID: int = None
+    UserID: int = None
     isBroker: bool = False
     isClient: bool = False
     isSysAdmin: bool = False
@@ -65,7 +64,7 @@ async def create_user(user: User):
         Username=user.Username,
         Password=user.Password,  # Store password as plain text (not recommended in production)
         Email=user.Email,
-        BrokerID=user.BrokerID,
+        UserID=user.UserID,
         isBroker=user.isBroker,
         isClient=user.isClient,
         isSysAdmin=user.isSysAdmin
@@ -103,7 +102,7 @@ async def update_user(user_id: int, user: User):
         Username=user.Username,
         Password=user.Password,  # Update password as plain text (not recommended in production)
         Email=user.Email,
-        BrokerID=user.BrokerID,
+        BrokerID=user.UserID,
         isBroker=user.isBroker,
         isClient=user.isClient,
         isSysAdmin=user.isSysAdmin
@@ -144,6 +143,5 @@ async def search_users(name: str):
     except Exception as e:
         raise HTTPException(status_code=405, detail=f"Invalid Query: {e}")
 
-    rows = [dict(row) for row in result]
-
-    return rows
+    for row in result:
+        return dict(row)

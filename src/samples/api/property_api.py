@@ -50,8 +50,6 @@ class Property(BaseModel):
     Bathrooms: int
     Size_SqFt: float
     IsAvailable: bool = True
-    BrokerID: int = None
-
 # CRUD Operations
 
 # Create Property
@@ -64,8 +62,7 @@ async def create_property(property: Property):
         Bedrooms=property.Bedrooms,
         Bathrooms=property.Bathrooms,
         Size_SqFt=property.Size_SqFt,
-        IsAvailable=property.IsAvailable,
-        BrokerID=property.BrokerID
+        IsAvailable=property.IsAvailable
     )
 
     try:
@@ -100,8 +97,7 @@ async def update_property(property_id: int, property: Property):
         Bedrooms=property.Bedrooms,
         Bathrooms=property.Bathrooms,
         Size_SqFt=property.Size_SqFt,
-        IsAvailable=property.IsAvailable,
-        BrokerID=property.BrokerID
+        IsAvailable=property.IsAvailable
     )
 
     try:
@@ -135,6 +131,5 @@ async def search_properties(city: str):
     except Exception as e:
         raise HTTPException(status_code=405, detail=f"Invalid Query: {e}")
 
-    rows = [dict(row) for row in result]
-
-    return rows
+    for row in result:
+        return dict(row)
