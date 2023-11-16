@@ -48,7 +48,6 @@ class User(BaseModel):
     Username: str
     Password: str
     Email: str
-    UserID: int = None
     isBroker: bool = False
     isClient: bool = False
     isSysAdmin: bool = False
