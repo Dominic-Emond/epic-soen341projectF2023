@@ -1,5 +1,6 @@
 from sqlalchemy import Table, Column, Integer, String, Float, Boolean, MetaData
 from pydantic import BaseModel
+from sqlalchemy.orm import relationship
 
 meta = MetaData()
 
@@ -15,6 +16,9 @@ properties = Table(
     Column('Size_SqFt', Float, nullable=False),
     Column('IsAvailable', Boolean, default=True),
     Column('BrokerID', Integer),
+    offers = relationship('Offer', back_populates='property'),
+    favourites = relationship('Favourite', back_populates='property')
+
 )
 
 # Property Class (Pydantic model)

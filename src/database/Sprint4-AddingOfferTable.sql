@@ -19,3 +19,9 @@ Create TABLE Offer (
 Alter TABLE Offer
 ADD Constraint fk_offer_property FOREIGN KEY (PropertyId) References Property(Id),
 ADD Constraint fk_offer_client FOREIGN KEY (ClientId) References Client(Id);
+
+# Adding New Table Favourites for Client Favourites Management
+CREATE TABLE Favourite (
+    PropertyId INT,
+    ClientId INT
+)
