@@ -7,7 +7,7 @@ client = TestClient(app)
 # Testing Client API Endpoints
 def test_client():
     
-    # Post
+    # Request
     sample_client = {
         "First_Name": "Jake",
         "Last_Name": "Barnes",
@@ -16,6 +16,7 @@ def test_client():
         "Pass": "password123"
     }
 
+    # Post
     response = client.post("/client", json=sample_client)
 
     assert response.status_code == 200
