@@ -7,7 +7,7 @@ connectAndRoute()
 
 # Testing Broker API Endpoints
 def test_broker():
-    
+
     # Post
     sample_broker = {
         "First_Name": "Harry",
@@ -18,12 +18,6 @@ def test_broker():
     }
 
     response = client.post("/broker", json=sample_broker)
-    
-    try:
-        with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-            print(response.json(), file=fh)
-    except:
-        pass
 
     assert response.status_code == 200
 
