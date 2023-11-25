@@ -3,7 +3,6 @@ from main import app, connectAndRoute
 import os
 
 client = TestClient(app)
-connectAndRoute()
 
 # Testing Broker API Endpoints
 def test_broker():

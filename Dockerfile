@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 
+# Add the CURL and SUDO Commands
 RUN apt-get update && \
     apt-get install -y curl sudo
 
@@ -13,7 +14,7 @@ RUN mkdir actions-runner && \
 # Create a directory in the container
 WORKDIR /app
 
-# Copy the entire content of the current directory into the container at /app
+# Copy the whole project manually inside the virtual environment
 COPY . /app
 
 CMD ["bash"]
