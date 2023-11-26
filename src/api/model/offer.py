@@ -1,5 +1,4 @@
 from sqlalchemy import Table, Column, Integer, DECIMAL, ForeignKey, MetaData
-from sqlalchemy.orm import relationship
 from pydantic import BaseModel
 
 meta = MetaData()

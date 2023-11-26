@@ -10,6 +10,8 @@ from crud_routing import create_table_routes
 from model.broker import brokers_table, BrokerModel
 from model.client import clients, Client
 from model.property import properties, Property
+from model.offer import offers, Offer
+from model.favourite import favourites, Favourite
 
 # Creates API
 app = FastAPI()
@@ -40,3 +42,5 @@ except Exception as e:
 create_table_routes(brokers_table, BrokerModel, connection, app)
 create_table_routes(clients, Client, connection, app)
 create_table_routes(properties, Property, connection, app)
+create_table_routes(offers, Offer, connection, app)
+create_table_routes(favourites, Favourite, connection, app)
