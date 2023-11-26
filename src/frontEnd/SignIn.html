@@ -241,7 +241,7 @@
 
             /* Go to endpoint & send POST request to retrieve the user data */
             try {
-                const response = await fetch("http://your-fastapi-server/login", { //Need to enter proper endpoint here
+                const response = await fetch("http://localhost:8000/api/create-account", { //Need to enter proper endpoint here
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
