@@ -17,11 +17,10 @@ def test_property():
         "Bathrooms": 2,
         "Size_SqFt": 1500.0,
         "IsAvailable": True,
-        "BrokerID": 1  # Replace with an existing Broker ID in your test database
+        "Broker_Id": 1  
     }
 
     response = client.post("/property", json=sample_property)
-
     assert response.status_code == 200
 
     property_id = response.json().get('Id')

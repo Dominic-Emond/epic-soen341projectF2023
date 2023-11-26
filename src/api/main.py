@@ -9,6 +9,7 @@ from sqlalchemy import create_engine
 from crud_routing import create_table_routes
 from model.broker import brokers_table, BrokerModel
 from model.client import clients, Client
+from model.property import properties, Property
 
 # Creates API
 app = FastAPI()
@@ -38,3 +39,4 @@ except Exception as e:
 # Creating the Routes
 create_table_routes(brokers_table, BrokerModel, connection, app)
 create_table_routes(clients, Client, connection, app)
+create_table_routes(properties, Property, connection, app)

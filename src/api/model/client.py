@@ -1,6 +1,5 @@
 from sqlalchemy import Table, Column, Integer, String, MetaData
 from pydantic import BaseModel
-from sqlalchemy.orm import relationship
 
 meta = MetaData()
 
@@ -13,8 +12,6 @@ clients = Table(
     Column('Type', Integer),
     Column('Username', String, nullable=False),
     Column('Pass', String, nullable=False),
-    offers = relationship('Offer', back_populates='client'),
-    favourites = relationship('Favourite', back_populates='client')
 )
 
 # Client Class (Pydantic model)
