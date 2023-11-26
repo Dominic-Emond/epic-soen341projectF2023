@@ -233,7 +233,55 @@
 </footer>
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-    
+  <script>
+    /* Function that checks the user type when loging in */
+    async function login() {
+            const username = document.getElementById("Username").value;
+            const password = document.getElementById("password").value;
+
+            /* Go to endpoint & send POST request to retrieve the user data */
+            try {
+                const response = await fetch("http://your-fastapi-server/login", { //Need to enter proper endpoint here
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        username: username,
+                        password: password,
+                    }),
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                /* data object holding the requested info */
+                const data = await response.json();
+
+                /* From backend code, there was 2 types: client and broker*/
+                const userType = data.type; 
+
+                if (type === "client") {
+                    /* User is a homebuyer, redirect to HomeBuyerProfile.html */
+                    console.log("User is a CLIENT");
+                    window.location.href = "HomeBuyerProfile.html";
+                } else if (type === "broker") {
+                    /* User is a broker, redirect to HOME PAGE */
+                    console.log("User is a Broker");
+                    window.location.href = "HomePage.html";
+                } else {
+                  /* Also redirect to HOME PAGE */
+                    console.log("Invalid user type");
+                    window.location.href = "HomePage.html";
+                }
+            
+            /* Exception handling */
+            } catch (error) {
+                console.error("Error during login:", error);
+            }
+        }
+  </script>  
 
 
 </body>
