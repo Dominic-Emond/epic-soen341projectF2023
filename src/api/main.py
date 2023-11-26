@@ -7,6 +7,7 @@ from sqlalchemy import create_engine
 
 # Internal Imports
 from crud_routing import create_table_routes
+from search_routing import create_search_route
 from model.broker import brokers_table, BrokerModel
 from model.client import clients, Client
 from model.property import properties, Property
@@ -38,9 +39,14 @@ try:
 except Exception as e:
     print(f"Could not connect to database: {e}")
 
-# Creating the Routes
+# Creating the CRUD Routes
 create_table_routes(brokers_table, BrokerModel, connection, app)
 create_table_routes(clients, Client, connection, app)
 create_table_routes(properties, Property, connection, app)
 create_table_routes(offers, Offer, connection, app)
 create_table_routes(favourites, Favourite, connection, app)
+
+# Creating the Search Routes
+create_search_route(brokers_table, [brokers_table.c.First_Name, brokers_table.c.Last_Name], BrokerModel, connection, app)
+create_search_route(clients, [clients.c.First_Name, clients.c.Last_Name], Client, connection, app)
+create_search_route(properties, [properties.c.Address, properties.c.City], Property, connection, app)

@@ -23,6 +23,10 @@ def test_broker():
     broker_id = response.json().get('Id')
     assert isinstance(broker_id, int)
 
+    # Search
+    response = client.get(f"searchbroker/{sample_broker['First_Name']}")
+    assert any(broker['Id'] == broker_id for broker in response.json())
+
     # Get
     response = client.get(f"broker/{broker_id}")
     assert response.status_code == 200

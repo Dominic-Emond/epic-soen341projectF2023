@@ -18,11 +18,14 @@ def test_client():
 
     # Post
     response = client.post("/client", json=sample_client)
-
     assert response.status_code == 200
 
     client_id = response.json().get('Id')
     assert isinstance(client_id, int)
+
+    # Search
+    response = client.get(f"searchclient/{sample_client['First_Name']}")
+    assert any(record['Id'] == client_id for record in response.json())
 
     # Get
     response = client.get(f"/client/{client_id}")

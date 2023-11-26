@@ -26,6 +26,10 @@ def test_property():
     property_id = response.json().get('Id')
     assert isinstance(property_id, int)
 
+    # Search
+    response = client.get(f"searchproperty/{sample_property['City']}")
+    assert any(record['Id'] == property_id for record in response.json())
+
     # Get
     response = client.get(f"/property/{property_id}")
     assert response.status_code == 200
