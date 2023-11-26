@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EPIC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-        .homePageSlideShow {display: none;}
-    </style>
+    
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -95,12 +93,12 @@
                 <path d="M5.793 1a1 1 0 0 1 1.414 0l.647.646a.5.5 0 1 1-.708.708L6.5 1.707 2 6.207V12.5a.5.5 0 0 0 .5.5.5.5 0 0 1 0 1A1.5 1.5 0 0 1 1 12.5V7.207l-.146.147a.5.5 0 0 1-.708-.708L5.793 1Zm3 1a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708L8.793 2Zm.707.707L5 7.207V13.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V7.207l-4.5-4.5Z"/>
               </svg>
           </a></li>
-          <li class="nav-item"><a class="nav-link" href="HomePage.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="CreateAccount.html">Create account</a></li>
           <li class="nav-item"><a class="nav-link" href="SignIn.html">Sign in</a></li>
           <li class="nav-item"><a class="nav-link" href="PropertyListing.html">Property Listing</a></li>
-          <li class="nav-item"><a class="nav-link" href="SignIn.html">Brokers</a></li>
-          <li class="nav-item"><a class="nav-link" href="SignIn.html">Mortgage Calculator</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Brokers</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Mortgage Calculator</a></li>
          
           <li class="nav-item"><a class="nav-link" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-heart" viewBox="0 0 16 16">
@@ -117,7 +115,18 @@
 
 <main>
   
-
+  <div class="container mt-5 d-flex justify-content-center">
+    <form>
+        <div class="mb-3">
+            <h3>Search for broker</h3>
+            <label for="firstName" class="form-label">First Name:</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Broker's first name" required>
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name:</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Broker's last name" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button><br/><br/>
     <!-- Mortgage Calculator -->
     <div class="container mt-5 text-center">
       <h2 class="text-center">Mortgage Calculator</h2>
@@ -160,7 +169,39 @@
       '$' + monthlyPayment.toFixed(2);
   }
 </script>
+<script>
+  function searchBroker() {
+      const apiUrl = 'http://your-fastapi-server-url';
+      
+      /* Get values from the form */
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
 
+      // Fetch data from the searchbroker endpoint
+      fetch(`${apiUrl}/searchbroker/${firstName}`)
+          .then(response => response.json())
+          .then(brokers => {
+              // Find the broker with matching last name
+              const matchingBroker = brokers.find(broker => broker.Last_Name === lastName);
+
+              if (matchingBroker) {
+                  // Display broker data
+                  const brokerDataElement = document.getElementById('brokerData');
+                  brokerDataElement.innerHTML = `
+                      <h1>Broker Data</h1>
+                      <p>First Name: ${matchingBroker.First_Name}</p>
+                      <p>Last Name: ${matchingBroker.Last_Name}</p>
+                      <p>Email: ${matchingBroker.Email_Address}</p>
+                  `;
+              } else {
+                  alert('Broker not found.');
+              }
+          })
+          .catch(error => {
+              console.error('Error searching for broker:', error);
+          });
+  }
+</script>
   
 
   
