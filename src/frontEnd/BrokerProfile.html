@@ -116,41 +116,78 @@
 </nav>
 
 <main>
-  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary" style="height:850px">
-    
-    <!--Center2-->
-  <div class="container text-center" >
-    <div class="row">
-      <div class="col">
-        
-      </div>
-      <div class="col-6 "   >
-        
-        <div class="container mt-5 d-flex justify-content-center">
-            <form>
-                <div class="mb-3">
-                    <h3>Search for broker</h3>
-                    <label for="firstName" class="form-label">First Name:</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Broker's first name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="lastName" class="form-label">Last Name:</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Broker's last name" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form> <br/><br/>
+  <div class="container mt-5 text-center">
+    <h2>Real Estate Offer Form</h2>
+
+    <form id="realEstateOfferForm" class="d-flex flex-column align-items-center">
+
+        <!-- Buyer Broker Info -->
+        <div class="text-center mb-3">
+            <h3>Buyer Broker Info</h3>
+            <div>
+                <label for="brokerName">Name:</label>
+                <input type="text" id="brokerName" name="brokerName" class="form-control" required>
+            </div>
+            <div>
+                <label for="licenseNumber">License Number:</label>
+                <input type="text" id="licenseNumber" name="licenseNumber" class="form-control" required>
+            </div>
+            <div>
+                <label for="agency">Agency:</label>
+                <input type="text" id="agency" name="agency" class="form-control" required>
+            </div>
         </div>
 
+        <!-- Buyers Info -->
+        <div class="text-center mb-3">
+            <h3>Buyers Info</h3>
+            <div>
+                <label for="buyerName">Name:</label>
+                <input type="text" id="buyerName" name="buyerName" class="form-control" required>
+            </div>
+            <div>
+                <label for="buyerAddress">Address:</label>
+                <input type="text" id="buyerAddress" name="buyerAddress" class="form-control" required>
+            </div>
+            <div>
+                <label for="buyerEmail">Email:</label>
+                <input type="email" id="buyerEmail" name="buyerEmail" class="form-control" required>
+            </div>
+        </div>
 
+        <!-- Property Info -->
+        <div class="text-center mb-3">
+            <h3>Property Info</h3>
+            <div>
+                <label for="propertyAddress">Property Address:</label>
+                <input type="text" id="propertyAddress" name="propertyAddress" class="form-control" readonly>
+            </div>
+        </div>
 
-      </div>
-      <div class="col">
-        
-      </div>
-    </div>
-  </div>
-    
-  </div>
+        <!-- Offer Details -->
+        <div class="text-center mb-3">
+            <h3>Offer Details</h3>
+            <div>
+                <label for="offerPrice">Price Offered:</label>
+                <input type="number" id="offerPrice" name="offerPrice" class="form-control" required>
+            </div>
+            <div>
+                <label for="deedOfSaleDate">Deed of Sale Date:</label>
+                <input type="date" id="deedOfSaleDate" name="deedOfSaleDate" class="form-control" required>
+            </div>
+            <div>
+                <label for="occupancyDate">Occupancy of Premises Date:</label>
+                <input type="date" id="occupancyDate" name="occupancyDate" class="form-control" required>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit Offer</button>
+        </div>
+
+    </form>
+</div>
 
   
 
