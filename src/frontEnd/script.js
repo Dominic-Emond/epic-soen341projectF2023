@@ -46,6 +46,7 @@
             if (response.ok) {
                 // Handle a successful response (e.g., show a success message)
                 alert("Account created successfully!");
+                window.location.replace("PropertyListing.html");
             } else {
                 // Handle errors (e.g., display an error message)
                 alert("Failed to create an account. Please try again.");
