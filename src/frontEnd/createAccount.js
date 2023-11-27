@@ -5,7 +5,7 @@ async function createAccount(accountType) {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    const url = `http://127.0.0.1:8000/${accountType}s`; // Assuming the endpoint follows the pattern /clients or /brokers
+    const url = `http://127.0.0.1:8000/${accountType}s`; 
 
     const accountData = {
         First_Name: fullName.split(' ')[0],
@@ -33,7 +33,7 @@ async function createAccount(accountType) {
 
             
         } else {
-            // If the response status is not ok, handle the error
+            // If the response status is not ok
             console.error('Account creation failed:', response.statusText);
         }
     } catch (error) {

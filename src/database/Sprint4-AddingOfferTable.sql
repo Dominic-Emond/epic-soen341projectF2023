@@ -13,7 +13,8 @@ Create TABLE Offer (
 	Id INT auto_increment primary key,
     Price DECIMAL,
     PropertyId INT,
-    ClientId INT
+    ClientId INT,
+    BrokerId INT
 );
 
 Alter TABLE Offer
