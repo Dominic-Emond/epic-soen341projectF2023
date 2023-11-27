@@ -22,11 +22,11 @@
         var type = isBroker ? "broker" : "client";
         // Create a JavaScript object to represent the user data
         const userData = {
-            fullName,
-            email,
-            username,
-            password,
-            type
+            First_Name: fullName.split(' ')[0],
+            Last_Name: fullName.split(' ')[1] || '',
+            Email_Address: email,
+            Username: username,
+            Pass: password
         };
 
         // Convert the JavaScript object to a JSON string
@@ -35,7 +35,7 @@
         // Simulate sending the JSON data to the backend API
         console.log("JSON Data to Send to Backend:", jsonData);
          // Make an HTTP POST request to your local API
-         fetch(`http://127.0.0.1:8000/${type}s`, {
+         fetch(`http://127.0.0.1:8000/${type}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
