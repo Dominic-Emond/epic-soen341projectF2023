@@ -12,7 +12,7 @@ def test_offer():
         "Price": 50000.0,
         "PropertyId": 1,
         "ClientId": 1,
-        "BrokerId":1
+        "BrokerId": 1
     }
 
     response = client.post("/offer", json=sample_offer)
