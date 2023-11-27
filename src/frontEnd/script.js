@@ -18,16 +18,15 @@
         const isBroker = document.getElementById("broker").value;
         const isClient = document.getElementById("client").value;
 
-        // Validate input fields here (e.g., check if passwords match, email format, etc.)
-
+        /* Capture the account type*/ 
+        var type = isBroker ? "broker" : "client";
         // Create a JavaScript object to represent the user data
         const userData = {
             fullName,
             email,
             username,
             password,
-            isBroker,
-            isClient
+            type
         };
 
         // Convert the JavaScript object to a JSON string
@@ -35,9 +34,8 @@
 
         // Simulate sending the JSON data to the backend API
         console.log("JSON Data to Send to Backend:", jsonData);
-
          // Make an HTTP POST request to your local API
-         fetch("http://localhost:8000/api/create-account", {
+         fetch(`http://127.0.0.1:8000/${type}s`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
