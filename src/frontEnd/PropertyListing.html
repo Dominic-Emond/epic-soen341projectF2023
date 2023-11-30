@@ -124,132 +124,138 @@
         </div>
    </div>
 
-   <form action="handler">
-    <fieldset>
-      <legend>Search for Properties</legend>
-  
-      <p>
-        Type of user:
-        <label for="type1">
-          <input type="radio" id="type1" name="type" value="client" /> Client
-        </label>
-        <label for="type2">
-          <input type="radio" id="type2" name="type" value="broker" /> Broker
-        </label>
-      </p>
-  
-      <p>
-        Purchase type:
-        <label for="type3">
-          <input
-            type="radio"
-            id="type3"
-            name="type3"
-            value="buy"
-            onchange="toggleFields(this)"
-          />
-          Buy
-        </label>
-        <label for="type4">
-          <input
-            type="radio"
-            id="type4"
-            name="type3"
-            value="rent"
-            onchange="toggleFields(this)"
-          />
-          Rent
-        </label>
-      </p>
-  
-      <fieldset id="propertyFields" style="display: none">
-        <p>
-          Property type:
-          <label for="type5">
-            <input type="radio" id="type5" name="type5" value="condo" />
-            Condo
-          </label>
-          <label for="type6">
-            <input type="radio" id="type6" name="type5" value="House" />
-            House
-          </label>
-        </p>
-  
-        <p>
-          Property price: <br>
-          <label for="type7">
-            <input type="radio" id="type7" name="type7" value="$0-$750,000" />
-            $0-$750,000
-          </label> <br>
-          <label for="type8">
-            <input type="radio" id="type8" name="type7" value="$750,000-$1,500,000" />
-            $750,000-$1,500,000
-          </label> <br>
-          <label for="type9">
-            <input type="radio" id="type9" name="type7" value="$1,500,000-$2,000,000" />
-            $1,500,000-$2,000,000
-          </label>
-          <label for="type11">
-            <input type="radio" id="type11" name="type7" value="$2,000,000+" />
-            $2,000,000+
-          </label>
-        </p>
-      </fieldset>
-  
-      <fieldset id="rentFields" style="display: none">
-        <p>
-          Rental type:
-          <label for="type10">
-            <input type="radio" id="type10" name="type10" value="condo" />
-            Condo
-          </label>
-          <label for="type11">
-            <input type="radio" id="type11" name="type10" value="House" />
-            House
-          </label>
-        </p>
-  
-        <p>
-          Rental price: <br>
-          <label for="type12">
-            <input type="radio" id="type12" name="type12" value="$1000" />
-            $1,000 / month
-          </label>
-          <br>
-          <label for="type13">
-            <input type="radio" id="type13" name="type12" value="$1000-$1,500" />
-            $1,000-$1,500 / month
-          </label>
-          <label for="type14">
-            <input type="radio" id="type14" name="type12" value="$1,500+" />
-            $1,500+ / month
-          </label>
-        </p>
-      </fieldset>
-    </fieldset>
-  
-    <p> Thank you for taking time to fill out our survey!</p>
-    <p>
-      <input type="submit" value="Submit" />
-      <input type="reset" value="Reset" />
-    </p>
-  </form>
-  
-  <script>
+   <div class="container mt-5">
+    <form action="handler" class="col-md-6">
+        <fieldset>
+            <legend>Search for Properties</legend>
 
+            <div class="form-group">
+                <label>Type of user:</label>
+                <div class="form-check">
+                    <input type="radio" id="type1" name="type" value="client" class="form-check-input">
+                    <label for="type1" class="form-check-label">Client</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="type2" name="type" value="broker" class="form-check-input">
+                    <label for="type2" class="form-check-label">Broker</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Purchase type:</label>
+                <div class="form-check">
+                    <input type="radio" id="type3" name="type3" value="buy" onchange="toggleFields(this)" class="form-check-input">
+                    <label for="type3" class="form-check-label">Buy</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="type4" name="type3" value="rent" onchange="toggleFields(this)" class="form-check-input">
+                    <label for="type4" class="form-check-label">Rent</label>
+                </div>
+            </div>
+
+            <div id="propertyFields" style="display: none">
+                <div class="form-group">
+                    <label>Property type:</label>
+                    <div class="form-check">
+                        <input type="radio" id="type5" name="type5" value="condo" class="form-check-input">
+                        <label for="type5" class="form-check-label">Condo</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="type6" name="type5" value="House" class="form-check-input">
+                        <label for="type6" class="form-check-label">House</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Property price:</label><br>
+                    <div class="form-check">
+                        <input type="radio" id="type7" name="type7" value="$0-$750,000" class="form-check-input">
+                        <label for="type7" class="form-check-label">$0-$450,000</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="type8" name="type7" value="$750,000-$1,500,000" class="form-check-input">
+                        <label for="type8" class="form-check-label">$450,000-$750,000</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" id="type8" name="type7" value="$750,000-$1,500,000" class="form-check-input">
+                      <label for="type8" class="form-check-label">$750,000-$1,500,000</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" id="type8" name="type7" value="$750,000-$1,500,000" class="form-check-input">
+                    <label for="type8" class="form-check-label">$1,500,000+</label>
+                </div>
+                    <!-- Add other property price options as needed -->
+                </div>
+            </div>
+
+            <div id="rentFields" style="display: none">
+                <div class="form-group">
+                    <label>Rental type:</label>
+                    <div class="form-check">
+                        <input type="radio" id="type10" name="type10" value="condo" class="form-check-input">
+                        <label for="type10" class="form-check-label">Condo</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="type11" name="type10" value="House" class="form-check-input">
+                        <label for="type11" class="form-check-label">House</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Rental price:</label><br>
+                    <div class="form-check">
+                        <input type="radio" id="type12" name="type12" value="$1000" class="form-check-input">
+                        <label for="type12" class="form-check-label">$0-$1,000 / month</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="type13" name="type12" value="$1000-$1,500" class="form-check-input">
+                        <label for="type13" class="form-check-label">$1,000-$1,500 / month</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="type13" name="type12" value="$1000-$1,500" class="form-check-input">
+                        <label for="type13" class="form-check-label">$1,500-$2,500 / month</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" id="type13" name="type12" value="$1000-$1,500" class="form-check-input">
+                      <label for="type13" class="form-check-label">$2,000+ / month</label>
+                  </div>
+                    <!-- Add other rental price options as needed -->
+                </div>
+                
+            </div>
+            <div class="form-group">
+              <label>Select City:</label>
+              <select class="form-control" name="city">
+                  <option value="Montreal">Montreal</option>
+                  <option value="Toronto">Toronto</option>
+                  <option value="Ottawa">Ottawa</option>
+                  <option value="Laval">Laval</option>
+              </select>
+          </div>
+        </fieldset>
+
+        <p>Thank you for taking time to fill out our survey!</p>
+        <p>
+            <input type="submit" value="Submit" class="btn btn-primary">
+            <input type="reset" value="Reset" class="btn btn-secondary">
+        </p>
+    </form>
+</div>
+
+<script>
     function toggleFields(radio) {
-      var propertyFields = document.getElementById("propertyFields");
-      var rentFields = document.getElementById("rentFields");
-  
-      if (radio.value === "buy") {
-        propertyFields.style.display = "block";
-        rentFields.style.display = "none";
-      } else if (radio.value === "rent") {
-        propertyFields.style.display = "none";
-        rentFields.style.display = "block";
-      }
+        var propertyFields = document.getElementById("propertyFields");
+        var rentFields = document.getElementById("rentFields");
+
+        if (radio.value === "buy") {
+            propertyFields.style.display = "block";
+            rentFields.style.display = "none";
+        } else if (radio.value === "rent") {
+            propertyFields.style.display = "none";
+            rentFields.style.display = "block";
+        }
     }
-  </script>
+</script>
   
   <div class="container text-center">
     <div class="row">
