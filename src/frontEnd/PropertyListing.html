@@ -124,10 +124,125 @@
         </div>
    </div>
 
+<<<<<<< Updated upstream
    <div class="container mt-5">
     <form action="handler" class="col-md-6">
         <fieldset>
             <legend>Search for Properties</legend>
+=======
+   <form action="handler">
+    <fieldset>
+      <legend>Search for Properties</legend>
+  
+      <p>
+        Type of user:
+        <label for="type1">
+          <input type="radio" id="type1" name="type" value="client" /> Client
+        </label>
+        <label for="type2">
+          <input type="radio" id="type2" name="type" value="broker" /> Broker
+        </label>
+      </p>
+  
+      <p>
+        Purchase type:
+        <label for="type3">
+          <input
+            type="radio"
+            id="type3"
+            name="type3"
+            value="buy"
+            onchange="toggleFields(this)"
+          />
+          Buy
+        </label>
+        <label for="type4">
+          <input
+            type="radio"
+            id="type4"
+            name="type3"
+            value="rent"
+            onchange="toggleFields(this)"
+          />
+          Rent
+        </label>
+      </p>
+  
+      <fieldset id="propertyFields" style="display: none">
+        <p>
+          Property type:
+          <label for="type5">
+            <input type="radio" id="type5" name="type5" value="condo" />
+            Condo
+          </label>
+          <label for="type6">
+            <input type="radio" id="type6" name="type5" value="House" />
+            House
+          </label>
+        </p>
+  
+        <p>
+          Property price: <br>
+          <label for="type7">
+            <input type="radio" id="type7" name="type7" value="$0-$750,000" />
+            $0-$750,000
+          </label> <br>
+          <label for="type8">
+            <input type="radio" id="type8" name="type7" value="$750,000-$1,500,000" />
+            $750,000-$1,500,000
+          </label> <br>
+          <label for="type9">
+            <input type="radio" id="type9" name="type7" value="$1,500,000-$2,000,000" />
+            $1,500,000-$2,000,000
+          </label>
+          <label for="type11">
+            <input type="radio" id="type11" name="type7" value="$2,000,000+" />
+            $2,000,000+
+          </label>
+        </p>
+      </fieldset>
+  
+      <fieldset id="rentFields" style="display: none">
+        <p>
+          Rental type:
+          <label for="type10">
+            <input type="radio" id="type10" name="type10" value="condo" />
+            Condo
+          </label>
+          <label for="type11">
+            <input type="radio" id="type11" name="type10" value="House" />
+            House
+          </label>
+        </p>
+  
+        <p>
+          Rental price: <br>
+          <label for="type12">
+            <input type="radio" id="type12" name="type12" value="$1000" />
+            $1,000 / month
+          </label>
+          <br>
+          <label for="type13">
+            <input type="radio" id="type13" name="type12" value="$1000-$1,500" />
+            $1,000-$1,500 / month
+          </label>
+          <label for="type14">
+            <input type="radio" id="type14" name="type12" value="$1,500+" />
+            $1,500+ / month
+          </label>
+        </p>
+      </fieldset>
+    </fieldset>
+  
+    
+    <p>
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </p>
+  </form>
+  
+  <script>
+>>>>>>> Stashed changes
 
             <div class="form-group">
                 <label>Type of user:</label>
@@ -265,6 +380,7 @@
             <img src="condo.jpg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">Condo for sale</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$892,000</b><br/> 5512, Rue de Mentana, Montréal (Le Plateau-Mont-Royal)</p>
               <a  href="condo.html" class="btn btn-primary">Interested</a>
             </div>
@@ -276,8 +392,9 @@
             <img src="house1.jpg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">House for sale</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$2,480,000</b><br/> 7074 - 7076, Rue De Normanville, (Rosemont/La Petite-Patrie)</p>
-              <a  href="house1.html" class="btn btn-primary">Interested</a>
+              <a  href="house4.html" class="btn btn-primary">Interested</a>
             </div>
           </div>
       </div>
@@ -287,6 +404,7 @@
             <img src="house2.jpg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">House for rent</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$1,300</b><br/> 4827, Rue de Riva-Bella, Montréal (Pierrefonds-Roxboro)</p>
               <a href="house2.html" class="btn btn-primary">Interested</a>
             </div>
@@ -303,6 +421,7 @@
             <img src="house3.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">House for sale</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$1,795,000</b><br/> 123, Avenue Wolseley Nord Montréal-ouest</p>
               <a href="house3.html" class="btn btn-primary">Interested</a>
             </div>
@@ -314,6 +433,7 @@
             <img src="house4.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">House for rent</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$1200</b><br/> 171, Andover Road Beaconsfield Neighbourhood Beacon Hill</p>
               <a href="house4.html" class="btn btn-primary">Interested</a>
             </div>
@@ -325,6 +445,7 @@
             <img src="house5.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">House for sale</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$2,650,000</b><br/> 339, boulevard Beaconsfield Beaconsfield</p>
               <a href="house5.html" class="btn btn-primary">Interested</a>
             </div>
@@ -341,6 +462,7 @@
             <img src="condo2.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">Condo for rent</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$1,800</b><br/> 1288 Avenue des Canadiens-de-Montréal Montréal (Ville-Marie)</p>
               <a href="condo2.html" class="btn btn-primary">Interested</a>
             </div>
@@ -352,6 +474,7 @@
             <img src="condo3.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">Condo for sale</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$1,700</b><br/> 556, Rue Nicolet, apt 302 Montréal (Mercier/Hochelaga-Maisonneuve)</p>
               <a href="condo3.html" class="btn btn-primary">Interested</a>
             </div>
@@ -363,6 +486,7 @@
             <img src="house6.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">House for rent</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$2,200</b><br/> 8990, boulevard des Galeries-d'Anjou Montréal (Anjou) </p>
               <a href="house6.html" class="btn btn-primary">Interested</a>
             </div>
@@ -379,6 +503,7 @@
             <img src="house7.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">House for sale</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$1,119,000</b><br/> 57002, Avenue Wolseley Cote-Saint-Luc</p>
               <a href="house7.html" class="btn btn-primary">Interested</a>
             </div>
@@ -390,6 +515,7 @@
             <img src="house8.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">House for rent</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$1,200</b><br/> 5072, boulevard Lalande Montréal (Pierrefonds-Roxboro)</p>
               <a href="house8.html" class="btn btn-primary">Interested</a>
             </div>
@@ -401,6 +527,7 @@
             <img src="house9.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">House for sale</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$1,299,000</b><br/> 5505, Avenue Elgin Cote-Saint-Luc (Nord-Ouest)</p>
               <a href="house9.html" class="btn btn-primary">Interested</a>
             </div>
@@ -417,6 +544,7 @@
             <img src="house10.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">House for rent</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$1,775</b><br/> 250, Hollis Road Beacon Neighbourhood Forest Gardens</p>
               <a href="house10.html" class="btn btn-primary">Interested</a>
             </div>
@@ -428,6 +556,7 @@
             <img src="house11.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">House for sale</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$889,000</b><br/> 5703, Avenue Rand Cote-Saint-Luc (Sout-Est)</p>
               <a href="house11.html" class="btn btn-primary">Interested</a>
             </div>
@@ -439,6 +568,7 @@
             <img src="house12.jpeg" class="card-img-top" alt="condo">
             <div class="card-body">
               <h5 class="card-title">Condo for rent</h5>
+              
               <p class="card-text" style="text-align: left;"><b>$1,400</b><br/> 7044, Rue Maurius-Barbeau Montréal (Rivière-des-prairies)</p>
               <a href="house12.html" class="btn btn-primary">Interested</a>
             </div>
